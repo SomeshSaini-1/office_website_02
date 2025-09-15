@@ -293,7 +293,7 @@
 }
 
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) { */
   .mission-hero {
     flex-direction: row;
     align-items: center;
@@ -307,7 +307,7 @@
   .impact-grid {
     grid-template-columns: repeat(4, 1fr);
   }
-}
+/* } */
 
 
 /* @media (min-width: 1024px) {
