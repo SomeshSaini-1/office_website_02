@@ -269,14 +269,7 @@
   background: #f3f4f6;
 }
 
-
-/* @media (min-width: 768px) { */
-  .mission-hero { flex-direction: row; }
-  .values-grid { grid-template-columns: repeat(3, 1fr); }
-  .impact-grid { grid-template-columns: repeat(4, 1fr); }
-/* } */
-
-
+/* Responsive Layouts */
 @media (min-width: 600px) {
   .hero-text h1 {
     font-size: 2.2rem;
@@ -292,8 +285,7 @@
   }
 }
 
-
-/* @media (min-width: 768px) { */
+@media (min-width: 768px) {
   .mission-hero {
     flex-direction: row;
     align-items: center;
@@ -307,18 +299,13 @@
   .impact-grid {
     grid-template-columns: repeat(4, 1fr);
   }
-/* } */
-
-
-/* @media (min-width: 1024px) {
-  .hero-text h1 {s
-    font-size: 3rem;
-  }
   .approach, .testimonials {
     padding: 3rem 4rem;
   }
-} */
-
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+}
 
 @media (min-width: 1280px) {
   .mission-container {
@@ -331,4 +318,3 @@
     padding: 4rem 6rem;
   }
 }
-
