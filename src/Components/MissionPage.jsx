@@ -1,5 +1,6 @@
 // import React from "react";
-import "../../css/MissionPage.css";
+import "../css/MissionPage.css";
+// import ""
 import { FaHandsHelping, FaStar, FaBalanceScale } from "react-icons/fa";
 
 const MissionPage = () => {
@@ -8,7 +9,7 @@ const MissionPage = () => {
       {/* Mission Hero */}
       <section className="mission-hero animate">
         <div className="hero-image">
-          <img src="/image/img1.jpg" alt="Mission Illustration" />
+          <img src="/Image/img1.jpg" alt="Mission Illustration" />
         </div>
         <div className="hero-text">
           <h1>Our Mission</h1>
