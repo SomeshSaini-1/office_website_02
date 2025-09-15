@@ -1,0 +1,191 @@
+/* Topbar Base */
+.topbar {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.topbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.topbar-logo img {
+  height: 42px;
+}
+
+/* Nav Desktop */
+.topbar-nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.topbar-nav a,
+.dropbtn {
+  color: #374151;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.topbar-nav a:hover,
+.dropbtn:hover {
+  color: #2563eb;
+}
+
+/* ===== Dropdown Base ===== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+  /* Hide by default */
+  opacity: 0;
+  transform: translateY(12px);
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 999;
+}
+
+/* Show on hover (desktop only) */
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-content {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+/* Also works when clicked (mobile or forced open) */
+.dropdown.active .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* ===== Submenu Styling ===== */
+.submenu {
+  margin-bottom: 0.75rem;
+}
+
+.submenu span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  display: block;
+  color: #6b7280;
+}
+
+.submenu a {
+  display: block;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  color: #374151;
+  font-size: 0.92rem;
+  transition: all 0.2s ease;
+}
+
+.submenu a:hover {
+  background: #f3f4f6;
+  color: #2563eb;
+  padding-left: 0.75rem;
+}
+
+/* ===== Mega Menu Support ===== */
+.dropdown.mega .dropdown-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  min-width: 400px;
+  padding: 1.25rem 1.5rem;
+}
+
+/* ===== Prevent cut-off on last item ===== */
+.dropdown:last-child .dropdown-content {
+  left: auto;
+  right: 0;
+}
+
+
+/* Hamburger */
+.topbar-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 768px) {
+  /* Hamburger visible */
+  .topbar-toggle {
+    display: block;
+    z-index: 1100;
+  }
+
+  /* Drawer menu */
+  .topbar-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 75%;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+    gap: 1rem;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .topbar-nav.active {
+    right: 0;
+  }
+
+  /* Links full width */
+  .topbar-nav a,
+  .dropbtn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    text-align: left;
+    border-radius: 6px;
+  }
+
+  /* Dropdown becomes accordion */
+  .dropdown-content {
+    position: static;
+    border: none;
+    box-shadow: none;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    display: none;
+  }
+
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
+}
