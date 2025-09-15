@@ -270,11 +270,11 @@
 }
 
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) { */
   .mission-hero { flex-direction: row; }
   .values-grid { grid-template-columns: repeat(3, 1fr); }
   .impact-grid { grid-template-columns: repeat(4, 1fr); }
-}
+/* } */
 
 
 @media (min-width: 600px) {
