@@ -310,14 +310,14 @@
 }
 
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .hero-text h1 {s
     font-size: 3rem;
   }
   .approach, .testimonials {
     padding: 3rem 4rem;
   }
-}
+} */
 
 
 @media (min-width: 1280px) {

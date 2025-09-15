@@ -1,5 +1,5 @@
 // import React from "react";
-import "../css/MissionPage.css";
+import "../../css/MissionPage.css";
 import { FaHandsHelping, FaStar, FaBalanceScale } from "react-icons/fa";
 
 const MissionPage = () => {
